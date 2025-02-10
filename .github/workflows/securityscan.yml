@@ -62,6 +62,7 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.6.1
         with:
+          upload-artifact: false
           docker_name: 'marcelopinto350/owasp_zap'
           target: 'http://testphp.vulnweb.com/'
           rules_file_name: '.zap/rules.tsv'
