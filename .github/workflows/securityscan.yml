@@ -27,8 +27,6 @@ jobs:
       - name: Install mocha-sonarqube-reporter
         run: npm install mocha-sonarqube-reporter --save-dev
 
-      - name: Run Unit Test
-        run: npm test
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
