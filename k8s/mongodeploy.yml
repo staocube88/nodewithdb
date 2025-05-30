@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: ghcr.io/staocube88/nodewithdb:87e7bf1
+          image: ghcr.io/staocube88/nodewithdb:e5e89c4
           ports:
             - containerPort: 27017
           volumeMounts:
@@ -26,4 +26,3 @@ spec:
       volumes:
         - name: mongo-data
           emptyDir: {}
-          
