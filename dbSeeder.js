@@ -1,6 +1,6 @@
 'use strict';
 var dataInitializer = require('./lib/dataSeeder'),
-    config = require('./config/config.development.json'),
+    config = require('./config/config.production.json'),
     db = require('./lib/database');
 
 db.init(config.databaseConfig);

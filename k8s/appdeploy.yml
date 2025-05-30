@@ -23,6 +23,8 @@ spec:
               value: "production"
             - name: APP_VERSION
               value: "1.0"
+            - name: MONGO_URI
+              value: "mongodb://mongodb:27017/funWithDocker"
             - name: DB_HOST
               value: "mongodb" # This must match the Service name
             - name: DB_PORT
