@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   REGISTRY: ghcr.io
@@ -30,18 +30,18 @@ jobs:
     - name: Build and push Docker image
       run: |
         IMAGE_TAG=${REGISTRY}/${IMAGE_NAME}:${GITHUB_SHA::7}
-        docker build -t $IMAGE_TAG -f docker/Dockerfile .
+        docker build -t $IMAGE_TAG -f Dockerfile .
         docker push $IMAGE_TAG
         echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
 
     - name: Update K8s manifests
       run: |
-        yq -i '.spec.template.spec.containers[0].image = env(IMAGE_TAG)' k8s/..
+        yq -i '.spec.template.spec.containers[0].image = env(IMAGE_TAG)' k8s/
 
     - name: Commit and push updated manifest
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add manifests/deployment.yaml
+        git add k8s/
         git commit -m "Update image to $IMAGE_TAG"
         git push
