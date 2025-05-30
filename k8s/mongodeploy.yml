@@ -14,7 +14,11 @@ spec:
     spec:
       containers:
         - name: mongodb
+<<<<<<< HEAD
           image: mongo:6
+=======
+          image: ghcr.io/staocube88/nodewithdb:e5e89c4
+>>>>>>> 21f25473984bb3082f388f01ff9a0cc129ec480d
           ports:
             - containerPort: 27017
           volumeMounts:

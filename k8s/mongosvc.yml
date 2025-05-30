@@ -8,3 +8,11 @@ spec:
   ports:
     - port: 27017
       targetPort: 27017
+<<<<<<< HEAD
+=======
+  clusterIP: None # Headless (optional if only used internally)
+  template:
+    spec:
+      containers:
+        - image: ghcr.io/staocube88/nodewithdb:e5e89c4
+>>>>>>> 21f25473984bb3082f388f01ff9a0cc129ec480d
