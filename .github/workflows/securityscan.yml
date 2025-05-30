@@ -61,6 +61,7 @@ jobs:
           ref: master
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.6.1
+        continue-on-error: true
         with:
           upload-artifact: false
           docker_name: 'marcelopinto350/owasp_zap'

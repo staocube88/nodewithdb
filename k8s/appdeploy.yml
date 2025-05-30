@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: nodeapp
-          image: nodeapp:latest
-          imagePullPolicy: Never
+          image: ghcr.io/staocube88/nodewithdb:6bab51e
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
           env:
@@ -28,4 +28,4 @@ spec:
               mountPath: /var/www/logs
       volumes:
         - name: logs-volume
-          emptyDir: {}  # In-memory volume for logs
+          emptyDir: {} # In-memory volume for logs
