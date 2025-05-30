@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nodeapp
-          image: ghcr.io/staocube88/nodewithdb:e5e89c4
+          image: ghcr.io/staocube88/nodewithdb:b7ffc3f
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
@@ -24,12 +24,11 @@ spec:
             - name: APP_VERSION
               value: "1.0"
             - name: DB_HOST
-              value: "mongodb"          # This must match the Service name
+              value: "mongodb" # This must match the Service name
             - name: DB_PORT
               value: "27017"
             - name: DB_NAME
               value: "funWithDocker"
-
           volumeMounts:
             - name: logs-volume
               mountPath: /var/www/logs
