@@ -1,6 +1,7 @@
 {
     "databaseConfig": {
-        "host": "mongodb",
-        "database": "funWithDocker"
-    }
+    "host": "mongodb",
+    "port": 27017,
+    "database": "funWithDocker"
+}
 }
