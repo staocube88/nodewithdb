@@ -6,12 +6,13 @@ pipeline {
         IMAGE = "${REGISTRY}/staocube88/nodewithdb"
         COMMIT_SHA = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
         IMAGE_TAG = "${IMAGE}:${COMMIT_SHA}"
+        GIT_PASS = "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'"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: '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', url: 'https://github.com/staocube88/nodewithdb.git'
+                git credentialsId: ${GIT_PASS}, url: 'https://github.com/staocube88/nodewithdb.git'
             }
         }
 
