@@ -74,7 +74,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, (err) => {
-    console.log('[%s] Listening on http://localhost:%d', app.settings.env, port);
+    console.log('[%s] Listening on http://mongodb:%d', app.settings.env, port);
 });
 
 
