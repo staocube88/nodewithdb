@@ -14,16 +14,20 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: ghcr.io/staocube88/nodewithdb:87e7bf1
+          image: mongo:6
           ports:
             - containerPort: 27017
           volumeMounts:
             - name: mongo-data
               mountPath: /data/db
-          env:
-            - name: NODE_ENV
-              value: "production"
+          readinessProbe:
+            exec:
+              command:
+                - mongo
+                - --eval
+                - "db.adminCommand('ping')"
+            initialDelaySeconds: 10
+            periodSeconds: 5
       volumes:
         - name: mongo-data
           emptyDir: {}
-          
