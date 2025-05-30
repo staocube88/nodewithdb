@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nodeapp
-          image: ghcr.io/staocube88/nodewithdb:534e313
+          image: ghcr.io/staocube88/nodewithdb:e2777ce
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000

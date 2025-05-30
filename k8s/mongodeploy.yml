@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongo:6.0
+          image: ghcr.io/staocube88/nodewithdb:e2777ce
           ports:
             - containerPort: 27017
           volumeMounts:
