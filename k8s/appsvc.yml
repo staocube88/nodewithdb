@@ -14,4 +14,4 @@ spec:
   template:
     spec:
       containers:
-        - image: ghcr.io/staocube88/nodewithdb:72446a3
+        - image: ghcr.io/staocube88/nodewithdb:31503b3
