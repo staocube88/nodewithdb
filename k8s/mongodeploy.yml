@@ -20,9 +20,10 @@ spec:
           volumeMounts:
             - name: mongo-data
               mountPath: /data/db
-      volumes:
-        - name: mongo-data
-          emptyDir: {}
           env:
             - name: NODE_ENV
               value: "production"
+      volumes:
+        - name: mongo-data
+          emptyDir: {}
+          
