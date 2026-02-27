@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.5",
-    "autoprefixer": "^10.4.15",
+    "autoprefixer": "^10.4.20",
     "cookie-parser": "^1.4.6",
     "debug": "^4.3.4",
     "express": "^4.18.2",
